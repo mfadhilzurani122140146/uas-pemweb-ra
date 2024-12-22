@@ -277,7 +277,7 @@ $_SESSION['is_logged_in'] = true;
 
 ![bukti-cookies](/assets/bukti-cookies.png)
 
-Diatas adalah kondisi saat cookies diset tetapi tidak muncul di layar, karena kemungkinan dari hosting infinitefree nya membatasi untuk merender cookiesnya, tetapi saat di jalankan di local cookiesnya muncul
+Diatas adalah kondisi saat cookies diset tetapi tidak muncul di layar, karena kemungkinan dari hosting `InfiniteFree` nya membatasi untuk merender cookiesnya, tetapi saat di jalankan di local cookiesnya muncul
 
 ![bukti-cookies](/assets/bukti-cookies2.png)
 
