@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Menambahkan Content Security Policy
+
 
 
 if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {

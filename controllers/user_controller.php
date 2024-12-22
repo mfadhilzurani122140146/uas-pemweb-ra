@@ -3,7 +3,7 @@ session_start();
 include '../config/db_config.php';
 include '../models/User.php';
 
-// Menambahkan Content Security Policy
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
