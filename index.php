@@ -3,7 +3,7 @@ session_start();
 
 // Jika pengguna sudah login, arahkan ke valorant.php
 if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {
-  header("Location: ./views/valorant.php");
+  header("Location: ../views/valorant.php");
   exit;
 }
 ?>
@@ -22,7 +22,7 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {
 <body>
   <header class="header">
     <div class="container">
-      <a href="../index.php">Valorant Website</a>
+      <a href="index.php">Valorant Website</a>
     </div>
   </header>
 
