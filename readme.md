@@ -1,4 +1,10 @@
-Berikut adalah penjelasan dan potongan kode
+Nama : Muhammad Fadhil Zurani
+NIM : 122140146
+Kelas : Pemrograman Web RA
+
+---
+
+Link Hosting Website : [click here!!](https://www.infinityfree.net/)
 
 ---
 
@@ -227,7 +233,7 @@ Berikut adalah langkah-langkah keamanan yang diterapkan:
 3. **Session Management**:
    - Menggunakan sesi untuk mengelola autentikasi pengguna, memastikan data tidak disimpan dalam cookie tanpa enkripsi.
 4. **Keamanan Database**:
-   - Password disimpan dalam bentuk hash menggunakan `password_hash()`.
+   - Password disimpan dalam bentuk hash menggunakan `password_hash()` dan ada password jika ingin mengakses database.
 
 ---
 
