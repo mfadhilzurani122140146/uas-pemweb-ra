@@ -25,7 +25,7 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {
 <body>
   <header class="header">
     <div class="container">
-      <a href="index.php">Valorant Website</a>
+      <a href="../index.php">Valorant Website</a>
     </div>
   </header>
 
