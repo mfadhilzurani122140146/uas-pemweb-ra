@@ -240,10 +240,6 @@ Berikut adalah langkah-langkah keamanan yang diterapkan:
 
 ---
 
-#### **4. Konfigurasi Server**
-
-Konfigurasi yang diterapkan untuk mendukung aplikasi di InfinityFree:
-
 ### **4. Konfigurasi Server**
 
 Konfigurasi yang diterapkan untuk mendukung aplikasi di **InfinityFree** mencakup pengaturan koneksi database dan pengaturan server.
