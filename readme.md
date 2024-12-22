@@ -225,22 +225,14 @@ Berikut adalah langkah-langkah keamanan yang diterapkan:
 2. **Validasi Input**:
    - Semua data dari pengguna divalidasi dan disanitasi baik di sisi klien maupun server untuk mencegah serangan seperti SQL Injection dan XSS.
 3. **Session Management**:
-
    - Menggunakan sesi untuk mengelola autentikasi pengguna, memastikan data tidak disimpan dalam cookie tanpa enkripsi.
 
-4. **Content Security Policy (CSP)**:
-
-   - Menambahkan header berikut untuk mencegah pengambilan sumber daya dari domain yang tidak terpercaya:
-     ```php
-     header("Content-Security-Policy: default-src 'self'");
-     ```
-
-5. **Keamanan Database**:
+4. **Keamanan Database**:
    - Password disimpan dalam bentuk hash menggunakan `password_hash()`.
 
 ---
 
-### **4. Konfigurasi Server**
+#### **4. Konfigurasi Server**
 
 Konfigurasi yang diterapkan untuk mendukung aplikasi di **InfinityFree** mencakup pengaturan koneksi database dan pengaturan server.
 
