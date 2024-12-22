@@ -173,17 +173,113 @@ $_SESSION['is_logged_in'] = true;
 #### **4.2 Pengelolaan State dengan Cookie dan Browser Storage (10%)**
 
 ```javascript
-document
-  .getElementById("setLocalStorageBtn")
-  .addEventListener("click", function () {
-    localStorage.setItem("valorantLocalStorage", stateInput.value);
-    alert("Data disimpan ke LocalStorage!");
-  });
+  document.addEventListener("DOMContentLoaded", () => {
+        // Referensi elemen DOM
+        const cookieInput = document.getElementById("cookieInput");
+        const localStorageInput = document.getElementById("localStorageInput");
+        const sessionStorageInput = document.getElementById(
+          "sessionStorageInput"
+        );
+
+        const cookieDisplay = document.getElementById("cookieDisplay");
+        const localStorageDisplay = document.getElementById(
+          "localStorageDisplay"
+        );
+        const sessionStorageDisplay = document.getElementById(
+          "sessionStorageDisplay"
+        );
+
+        // Fungsi untuk memperbarui tampilan nilai
+        function updateDisplays() {
+          // Tampilkan Cookie
+          const cookies = document.cookie.split("; ").reduce((acc, cookie) => {
+            const [key, value] = cookie.split("=");
+            acc[key] = value;
+            return acc;
+          }, {});
+          cookieDisplay.textContent =
+            cookies.valorantCookie || "Belum ada nilai";
+
+          // Tampilkan LocalStorage
+          localStorageDisplay.textContent =
+            localStorage.getItem("valorantLocalStorage") || "Belum ada nilai";
+
+          // Tampilkan SessionStorage
+          sessionStorageDisplay.textContent =
+            sessionStorage.getItem("valorantSessionStorage") ||
+            "Belum ada nilai";
+        }
+
+        // Fungsi untuk Cookie
+        document.getElementById("setCookie").addEventListener("click", () => {
+          const value = cookieInput.value.trim();
+          if (!value) {
+            alert("Masukkan nilai terlebih dahulu!");
+            return;
+          }
+          document.cookie = `valorantCookie=${value}; path=/; max-age=3600`; // Berlaku 1 jam
+          updateDisplays();
+        });
+
+        document.getElementById("deleteCookie").addEventListener("click", () => {
+            document.cookie = "valorantCookie=; path=/; max-age=0"; // Hapus cookie
+            updateDisplays();
+          });
+
+        // Fungsi untuk LocalStorage
+        document.getElementById("setLocalStorage").addEventListener("click", () => {
+            const value = localStorageInput.value.trim();
+            if (!value) {
+              alert("Masukkan nilai terlebih dahulu!");
+              return;
+            }
+            localStorage.setItem("valorantLocalStorage", value);
+            updateDisplays();
+          });
+
+        document
+          .getElementById("deleteLocalStorage")
+          .addEventListener("click", () => {
+            localStorage.removeItem("valorantLocalStorage");
+            updateDisplays();
+          });
+
+        // Fungsi untuk SessionStorage
+        document
+          .getElementById("setSessionStorage")
+          .addEventListener("click", () => {
+            const value = sessionStorageInput.value.trim();
+            if (!value) {
+              alert("Masukkan nilai terlebih dahulu!");
+              return;
+            }
+            sessionStorage.setItem("valorantSessionStorage", value);
+            updateDisplays();
+          });
+
+        document
+          .getElementById("deleteSessionStorage")
+          .addEventListener("click", () => {
+            sessionStorage.removeItem("valorantSessionStorage");
+            updateDisplays();
+          });
+
+        // Inisialisasi tampilan
+        updateDisplays();
+      });
 ```
 
 **Penjelasan:**
 
-- Menggunakan `localStorage` untuk menyimpan data di browser pengguna.
+- Menggunakan `setCookie` dan `deleteCookie` untuk menyimpan dan menghapus cookies di browser pengguna 
+- Menggunakan `setLocalStorage` dan `deleteLocalStorage` untuk menyimpan dan menghapus cookies di browser pengguna 
+- Menggunakan `setSessionStorage` dan `deleteSessionStorage` untuk menyimpan dan menghapus cookies di browser pengguna 
+
+![bukti-cookies](/assets/bukti-cookies.png)
+
+Diatas adalah kondisi saat cookies diset tetapi tidak muncul di layar, karena kemungkinan dari hosting infinitefree nya membatasi untuk merender cookiesnya, tetapi saat di jalankan di local cookiesnya muncul
+
+![bukti-cookies](/assets/bukti-cookies2.png)
 
 ---
 
