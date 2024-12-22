@@ -40,17 +40,14 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {
     <section class="about">
       <h2>Tentang Valorant Web</h2>
       <p>
-        Valorant Web adalah platform yang membantu pemain melacak statistik
-        permainan, agen favorit, dan perkembangan peringkat mereka.
-        Bergabunglah untuk menunjukkan kemampuan Anda dan terhubung dengan
-        pemain lain!
+        Valorant Website adalah platform yang mendata nama pemain, agen favorit, dan rank pemain.
+        Bergabunglah untuk menunjukkan data stats akun anda 
       </p>
     </section>
 
     <section class="features">
       <h2>Fitur</h2>
       <ul>
-        <li>Melacak statistik dan perkembangan pemain.</li>
         <li>Mendaftar akun untuk menyimpan data secara aman.</li>
       </ul>
     </section>
@@ -61,7 +58,7 @@ if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in']) {
         Baik Anda pemain santai atau penggemar kompetitif, Valorant Web
         menawarkan berbagai alat untuk meningkatkan pengalaman bermain Anda.
       </p>
-      <a href="register.html" class="cta-button">Daftar Sekarang</a>
+      <a href="views/register.php" class="cta-button">Daftar Sekarang</a>
     </section>
   </main>
 
