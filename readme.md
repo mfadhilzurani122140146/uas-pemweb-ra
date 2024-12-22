@@ -226,7 +226,6 @@ Berikut adalah langkah-langkah keamanan yang diterapkan:
    - Semua data dari pengguna divalidasi dan disanitasi baik di sisi klien maupun server untuk mencegah serangan seperti SQL Injection dan XSS.
 3. **Session Management**:
    - Menggunakan sesi untuk mengelola autentikasi pengguna, memastikan data tidak disimpan dalam cookie tanpa enkripsi.
-
 4. **Keamanan Database**:
    - Password disimpan dalam bentuk hash menggunakan `password_hash()`.
 
