@@ -20,7 +20,7 @@ form {
   display: flex;
   flex-direction: column; /* Mengatur elemen dalam kolom */
   gap: 15px; /* Jarak antar elemen */
-  min-width: 500px;
+  min-width: 300px;
 }
 
 form label {
